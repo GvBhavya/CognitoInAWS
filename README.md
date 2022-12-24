@@ -2,26 +2,29 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
 
-## Development server
+Here is the demo to explain how to integrate Cognito with Angular application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+what is Cognito : 
+1.It is the authentication layer added  for users within  application.
+2.We can set up the roles for each user to access the applciation pages.
 
-## Code scaffolding
+How to setup Cognito in AWS :
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1.Go to Cognito
+2.Select 'Manage User Pools'
+3.Click 'Create User Pool' button
+4.Under name -> Give the pool name - 'demo-app-user-pool'
+5.Under Attributes -> Select 'Email address or phone number' 
+6.Under Policies -> Set password
+7.Continue next steps and user pool get created
+8.Next goTo 'AppClients' from sidenav
+9.Add App Client
+10.Go To - 'App Client Settings'  -> select 'Cognito user pools'
+11.Under 'Oauth 2.0' -> Under 'Allowed OAuth Flows' -> select 'Authorization code grant'
+12.Under 'Allowed OAuth Scopes',select email,openid
+13.Choose Domain Name - > enter a unique domain name 
+14.Once the domain is created,go back to 'app client settings', click on 'launchUI'
+15.Copy and paste the URL in the application.
+16.You are all set! 
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<!-- HAPPY CODING -->
